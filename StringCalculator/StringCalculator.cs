@@ -1,9 +1,11 @@
 ﻿public class StringCalculator
 {
+    // le delimitateur
     private const char DefaultDelimiter = ',';
 
     public int Add(string input)
     {
+        // cas de 0 
         if (string.IsNullOrEmpty(input))
             return 0;
 
@@ -15,6 +17,7 @@
         return numbers.Sum();
     }
 
+    // verification nombres négatifs
     private static void CheckForNegativeNumbers(IEnumerable<int> numbers)
     {
         List<int> negativeNumbers = numbers.Where(number => number < 0).ToList();
